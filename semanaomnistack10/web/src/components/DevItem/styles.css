@@ -1,0 +1,112 @@
+@import url('//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css');
+@import url('//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css');
+@import url('//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css');
+@import url('//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css');
+/* Botão cancel vem do alertify em inglês, então adicionar 'ar' para 'cancelar'.*/
+button.ajs-button.ajs-cancel:after {
+    content: 'ar';
+}
+
+main {
+    width: 100%;
+}
+
+main ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style: none;
+}
+
+@media (max-width: 650px) {
+    main ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+li.dev-item {
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.02);
+    border-radius: 16px;
+    border: 2px solid rgb(23, 191, 99);
+    padding: 20px;
+    transition: background 0.5s;
+}
+
+li.dev-item:hover {
+  background: #3b3d3c;
+}
+li.dev-item header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+li.dev-item header img {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 2px solid rgb(23, 191, 99);
+}
+
+li.dev-item header .user-info{
+    margin-left: 10px;
+}
+
+.user-info strong {
+    display: block;
+    font-size: 16px;
+    color: #ffff;
+    cursor: pointer;
+}
+
+.user-info span {
+    font-size: 13px;
+    color: #3b3d3c;
+    margin-top: 2px;
+    cursor: pointer;
+}
+
+li.dev-item p {
+    color: #ffff;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+li.dev-item a {
+    color: rgb(23, 191, 99);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+li.dev-item a:hover {
+    color: #000000;
+}
+.button-list{
+    display: flex;
+    justify-content: flex-start;
+}
+.button-list button {
+    
+    background: #FFF;
+    border: none;
+    cursor: pointer;
+}
+
+
+.button-list button#delete {
+  background:#000;
+  border-radius: 2px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14px;
+  color: rgb(23, 191, 99);
+  border: 0.5px solid rgb(23, 191, 99);
+  margin-left: 5px;
+}
+.button-list button#delete:hover {
+    text-decoration: none;
+    background-color: #3b3d3c;
+    color:white;
+}
